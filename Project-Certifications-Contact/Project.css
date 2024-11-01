@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;   
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    scroll-behavior: smooth;
+    background-color: black;
+    background-image: linear-gradient(rgba(179, 176, 176, 0.227) 1px, transparent 1px), 
+                      linear-gradient(90deg, rgba(179, 176, 176, 0.227) 1px, transparent 1px);
+    background-size: 50px 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: black; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #567a56;
+}
+.nav{
+    animation: fadein 2s ease-in-out forwards;
+    z-index: 10;
+    margin: 20px 50px;
+    position: sticky;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.nav ul{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:xx-large;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav ul li{
+    list-style-type: none;
+}
+.nav ul li a {
+    font-weight: 200;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: cyan;
+    transition: width 0.3s ease;
+}
+
+.nav ul li a:hover::after {
+    width: 100%;
+}
+
+.My_name{
+    font-family: "Londrina Sketch", sans-serif;
+    font-size: 3.5rem;
+    
+}
+.About_section{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+}
+#Project{
+    color: white;
+    background-color: black;
+    border: 1px solid cyan;
+}
+
+.About_section button {
+    animation: scaleUp 1s ease forwards;
+    animation-delay: 0.2s;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    padding: 8px;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: color 0.4s ease;
+}
+
+.About_section button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border: 2px solid cyan;
+    transition: width 0.4s ease;
+    box-sizing: border-box;
+}
+
+.About_section button:hover::before {
+    width: 100%;
+}
+
+.About_section button:hover {
+    color: white;
+    background-color: black;
+}
+.About_section button a{
+    color: black;
+    text-decoration: none;
+}
+
+.About_section button:hover{
+    transition: .4s ease;
+    background-color: black;
+    a{
+        color: white;
+    }
+}
+
+.time{
+    animation: slideInLeft 1.5s ease forwards;
+    animation-delay: 0.4s;
+    font-size: 1.37rem;
+    width: 768px;
+    margin: 10vh auto;
+    text-align: center;
+    line-height: 40px;
+}
+
+.Home-menu{
+    margin: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+}
+
+.Home-menu h1{
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Londrina Sketch", sans-serif;
+}
+
+.food{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 4vh;
+}
+
+.content h3{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 6px;
+}
+.content p{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.foodimg{
+    border-radius: 12px;
+    overflow: hidden;
+}
+.foodimg img{
+    width: 360px;
+}
+
+.foodimg:hover{
+    img{
+        transform: scale(1.3);
+        transition: .4s ease-in-out;
+    }
+}
+
+.hr {
+    height: 5px;
+    background: linear-gradient(to right, transparent, gray, transparent);
+    border: none;
+    margin: 20px 0;
+}
+  
+  .testimonials-section h1 {
+    font-size: 4rem;
+    margin: 10px;
+  }
+  
+  .testimonials-wrapper {
+    margin-top: 10vh;
+    background-color: rgba(179, 176, 176, 0.327);
+    padding: 30px;
+    overflow: hidden; 
+    width: 100%;
+  }
+  
+  .testimonials-slider {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    align-items: center;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .testimonial {
+    margin-right: 30px;
+    text-align: center;
+  }
+  
+  .testimonial img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial p {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial h3 {
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+.beforefooter{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h2{
+        margin: 5vh;
+        font-size: 3rem;
+    }
+    p{
+        width: 70%;
+        margin: auto;
+        font-size: 1.5rem;
+        font-weight: 200;
+        b{
+            text-decoration: underline;
+            text-decoration-color: cyan;
+        }
+    }
+    
+}
+footer{
+    margin-top: 8vh;
+    text-align: center;
+    background-color: aqua;
+    padding: 6px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p{
+        color: black;
+    }
+}
+#footer{
+    display: flex;
+    gap: 20px;
+}
+#footer a:hover{
+    img{
+        transform: scale(1.19);
+        transition: .3s ease-in-out;
+    }
+}
+.scrollup{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display:inline-block;
+    text-align: center;
+    background-color: gray;
+    border-radius: 45%;
+    padding: 10px;
+    img{
+        width: 30px;
+        filter: invert(1);
+    }
+    p{
+        font-size: 10px;
+    }
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    
+    .About_section{
+        margin-top: 4vh;
+        gap: 10px;
+    }
+    .About_section button{
+        padding: 6px;
+        border-radius: 6px;
+        border: none;
+        font-size: 1.5rem;
+    }
+    .testimonials-section h1 {
+        font-size: 4rem;
+        margin: 10px;
+      }
+      
+      .testimonials-wrapper {
+        margin-top:5vh;
+        background-color: rgba(179, 176, 176, 0.327);
+        padding: 15px;
+        overflow: hidden; 
+        width: 100%;
+      }
+      
+      .testimonials-slider {
+        gap: 5vw;
+      }
+      
+      .testimonial img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 50%;
+        margin-bottom: 15px;
+      }
+      
+      .testimonial p {
+        font-size: .9rem;
+        margin-bottom: 10px;
+      }
+      
+      .testimonial h3 {
+        font-size: 1rem;
+        font-weight: normal;
+      }
+  }
+@media only screen and (max-width: 800px) {
+    .Home-menu{
+        margin: 4vh 0;
+        gap: 5vh;
+    }
+    .time{
+        font-size: 1rem;
+        width: 400px;
+        margin: 4vh auto;
+    }
+    .timeofopening{
+        h3{
+            font-size: 1rem;
+        }
+    }
+}
+@media only screen and (max-width:940px) {
+    .nav ul{
+        font-size: large;
+        gap: 30px;
+    }
+    .My_name{
+        text-align: center;
+        font-family: "Londrina Sketch", sans-serif;
+        font-size: 2rem;
+        letter-spacing:6px;
+    }
+    .beforefooter{
+        margin-top: 4vh;
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
+}
+@media only screen and (max-width:680px) {
+    .nav{
+        margin: 20px;
+    }
+    .nav ul{
+        font-size:medium;
+        gap: 15px;
+    }
+    .My_name{
+        text-align: center;
+        font-family: "Londrina Sketch", sans-serif;
+        font-size: 1.5rem;
+        letter-spacing:6px;
+    }
+}
+@media only screen and (max-width: 880px) {
+    .food{
+        flex-direction: column;
+        gap: 3vh;
+        h3{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+        img{
+            width: 200px;
+        }
+    }
+}
+
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(100px);
+        transform: scale(1.5);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes scaleUp {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-220px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    0% {
+            opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+       
+    }
+}
